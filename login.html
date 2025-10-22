@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Arte, Loja, Materiais, Site, Website">
+    <link rel="icon" type="image/x-icon" href="img/estrutura/logo.ico">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Login - GalArts</title>
+</head>
+
+<body>
+    <header>
+        <!-- barra de navegação principal do site -->
+        <nav class="navbar navbar-expand-lg navbar-custom w-100" style="box-shadow: 0 2px 4px rgb(255, 255, 255);">
+            <div class="container-fluid px-4">
+                <!-- link para a página inicial -->
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    GalArts
+                </a>
+                <!-- botão para menu responsivo -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- links de navegação do menu -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="categorias.html">Categorias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="produtos.html">Produtos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="carrinho.html">Carrinho</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="meus-pedidos.html">Meus Pedidos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="depoimentos.html">Depoimentos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ajuda.html">Ajuda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container d-flex flex-column align-items-center justify-content-center" style="flex:1 0 auto; min-height: 70vh;">
+        <div class="card shadow p-4" style="max-width: 400px; width: 100%; margin-top: 40px;">
+            <h2 class="section-title mb-4">Entrar</h2>
+            <form id="loginForm" autocomplete="off">
+                <div class="mb-3">
+                    <label for="username" class="form-label">Usuário</label>
+                    <input type="text" class="form-control" id="username" name="username" required autofocus>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Senha</label>
+                    <input type="password" class="form-control" id="password" name="password" required>
+                </div>
+                <div id="loginError" class="alert alert-danger d-none py-2" role="alert"></div>
+                <button type="submit" class="btn btn-primary w-100">Entrar</button>
+            </form>
+        </div>
+    </main>
+    <footer style="background: linear-gradient(90deg, #42213D 50%, #BD4089 100%);">
+        <!-- seção de redes sociais e informações do rodapé -->
+        <div class="social-media">
+            <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-pinterest"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p>GalArts - Materiais Artísticos de Qualidade</p>
+        <p>&copy; 2025 GalArts. Todos os direitos reservados.</p>
+    </footer>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script>
+        // validação simples do login
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const user = document.getElementById('username').value.trim();
+            const pass = document.getElementById('password').value;
+            const errorDiv = document.getElementById('loginError');
+            if (user === 'admin' && pass === '1234') {
+                window.location.href = 'index.html';
+            } else {
+                errorDiv.textContent = 'Usuário ou senha incorretos.';
+                errorDiv.classList.remove('d-none');
+            }
+        });
+    </script>
+</body>
+
+</html>

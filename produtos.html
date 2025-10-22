@@ -1,139 +1,204 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="img/logo.ico">
+    <meta name="keywords" content="Arte, Loja, Materiais, Site, Website">
+    <link rel="icon" type="image/x-icon" href="img/estrutura/logo.ico">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Produtos - GalArts</title>
 </head>
+
 <body>
     <header>
-        <div class="logo">
-            <h1>GalArts</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="categorias.html">Categorias</a></li>
-                <li><a href="produtos.html">Produtos</a></li>
-            </ul>
+        <!-- barra de navegação principal do site -->
+        <nav class="navbar navbar-expand-lg navbar-custom w-100" style="box-shadow: 0 2px 4px rgb(255, 255, 255);">
+            <div class="container-fluid px-4">
+                <!-- link para a página inicial -->
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    GalArts
+                </a>
+                <!-- botão para menu responsivo -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- links de navegação do menu -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="categorias.html">Categorias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="produtos.html">Produtos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="carrinho.html">Carrinho</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="meus-pedidos.html">Meus Pedidos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="depoimentos.html">Depoimentos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ajuda.html">Ajuda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
-    
     <main>
-        <section class="product-list">
-            <h2 class="section-title">Todos os produtos</h2>
-            <div class="products">
-                <article class="product">
-                    <div class="sale-badge">-30%</div>
-                    <img src="img/aquarela.jpg" alt="Aquarela em Pastilhas">
-                    <h3>Aquarela em Pastilhas</h3>
-                    <p class="description">Conjunto com 24 cores, alta pigmentação.</p>
-                    <div class="price-info">
-                        <p class="price">R$ 89,90</p>
-                        <a href="produto.html?id=1" class="btn btn-primary">Ver detalhes</a>
+        <!-- seção que lista todos os produtos disponíveis -->
+        <section class="product-list container my-5">
+            <h2 class="section-title">Produtos</h2>
+
+            <!-- opções de exibição dos produtos -->
+            <div class="d-flex align-items-center mb-4">
+                <span class="me-3">4 por Linha</span>
+                <div class="btn-group" role="group" aria-label="Opções de exibição">
+                    <button type="button" class="btn btn-secondary" aria-label="Exibir 1 por linha"><i
+                            class="fa-solid fa-square"></i></button>
+                    <button type="button" class="btn btn-secondary" aria-label="Exibir 2 por linha"><i
+                            class="fa-solid fa-bars-staggered"></i></button>
+                    <button type="button" class="btn btn-secondary" aria-label="Exibir 3 por linha"><i
+                            class="fa-solid fa-bars"></i></button>
+                    <button type="button" class="btn btn-secondary active" aria-label="Exibir 4 por linha"><i
+                            class="fa-solid fa-barcode"></i></button>
+                </div>
+            </div>
+
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <span class="badge bg-danger position-absolute top-0 start-0 m-2">-30%</span>
+                        <img src="img/produtos/aquarela.jpg" class="card-img-top" alt="Aquarela em Pastilhas">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Aquarela em Pastilhas</h5>
+                            <p class="card-text">Conjunto com 24 cores, alta pigmentação.</p>
+                            <p class="price fw-bold">R$ 89,90</p>
+                            <a href="produto.html?id=1" class="btn btn-primary mt-auto">Ver detalhes</a>
+                        </div>
                     </div>
-                </article>
-                <article class="product">
-                    <div class="sale-badge">-24%</div>
-                    <img src="img/acrilica.jpg" alt="Tinta Acrílica">
-                    <h3>Tinta Acrílica</h3>
-                    <p class="description">Cores vibrantes, secagem rápida, embalagem de 120ml.</p>
-                    <div class="price-info">
-                        <p class="price">R$ 18,90</p>
-                        <a href="produto.html?id=2" class="btn btn-primary">Ver detalhes</a>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <span class="badge bg-danger position-absolute top-0 start-0 m-2">-24%</span>
+                        <img src="img/produtos/acrilica.jpg" class="card-img-top" alt="Tinta Acrílica">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Tinta Acrílica</h5>
+                            <p class="card-text">Cores vibrantes, secagem rápida, embalagem de 120ml.</p>
+                            <p class="price fw-bold">R$ 18,90</p>
+                            <a href="produto.html?id=2" class="btn btn-primary mt-auto">Ver detalhes</a>
+                        </div>
                     </div>
-                </article>
-                <article class="product">
-                    <div class="sale-badge">-18%</div>
-                    <img src="img/oleo.jpg" alt="Tinta a Óleo">
-                    <h3>Tinta a Óleo</h3>
-                    <p class="description">Tubo de 200ml, ideal para técnicas de empasto.</p>
-                    <div class="price-info">
-                        <p class="price">R$ 44,90</p>
-                        <a href="produto.html?id=3" class="btn btn-primary">Ver detalhes</a>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <span class="badge bg-danger position-absolute top-0 start-0 m-2">-18%</span>
+                        <img src="img/produtos/oleo.jpg" class="card-img-top" alt="Tinta a Óleo">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Tinta a Óleo</h5>
+                            <p class="card-text">Tubo de 200ml, ideal para técnicas de empasto.</p>
+                            <p class="price fw-bold">R$ 44,90</p>
+                            <a href="produto.html?id=3" class="btn btn-primary mt-auto">Ver detalhes</a>
+                        </div>
                     </div>
-                </article>
-                <article class="product">
-                    <div class="sale-badge">-22%</div>
-                    <img src="img/pincel.jpg" alt="Kit Pincéis Sintéticos">
-                    <h3>Kit Pincéis Sintéticos</h3>
-                    <p class="description">7 unidades, Cabo de madeira, variedade de formatos.</p>
-                    <div class="price-info">
-                        <p class="price">R$ 69,90</p>
-                        <a href="produto.html?id=4" class="btn btn-primary">Ver detalhes</a>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <span class="badge bg-danger position-absolute top-0 start-0 m-2">-22%</span>
+                        <img src="img/produtos/pincel.jpg" class="card-img-top" alt="Kit Pincéis Sintéticos">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Kit Pincéis Sintéticos</h5>
+                            <p class="card-text">7 unidades, Cabo de madeira, variedade de formatos.</p>
+                            <p class="price fw-bold">R$ 69,90</p>
+                            <a href="produto.html?id=4" class="btn btn-primary mt-auto">Ver detalhes</a>
+                        </div>
                     </div>
-                </article>
-                <article class="product">
-                    <img src="img/pincel_marta.jpg" alt="Pincel para Detalhes em Pelo de Marta">
-                    <h3>Pincel para Detalhes em Pelo de Marta</h3>
-                    <p class="description">Precisão para miniaturas e retratos.</p>
-                    <div class="price-info">
-                        <p class="price">R$ 32,00</p>
-                        <a href="produto.html?id=5" class="btn btn-primary">Ver detalhes</a>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/produtos/pincel_marta.jpg" class="card-img-top"
+                            alt="Pincel para Detalhes em Pelo de Marta">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Pincel para Detalhes em Pelo de Marta</h5>
+                            <p class="card-text">Precisão para miniaturas e retratos.</p>
+                            <p class="price fw-bold">R$ 32,00</p>
+                            <a href="produto.html?id=5" class="btn btn-primary mt-auto">Ver detalhes</a>
+                        </div>
                     </div>
-                </article>
-                <article class="product">
-                    <img src="img/lapis.jpg" alt="Lápis Profissional">
-                    <h3>Lápis Profissional</h3>
-                    <p class="description">Caixa com 12 unidades, ideal para desenhos profissionais.</p>
-                    <div class="price-info">
-                        <p class="price">R$ 29,90</p>
-                        <a href="produto.html?id=6" class="btn btn-primary">Ver detalhes</a>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/produtos/lapis.jpg" class="card-img-top" alt="Lápis Profissional">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Lápis Profissional</h5>
+                            <p class="card-text">Caixa com 12 unidades, ideal para desenhos profissionais.</p>
+                            <p class="price fw-bold">R$ 29,90</p>
+                            <a href="produto.html?id=6" class="btn btn-primary mt-auto">Ver detalhes</a>
+                        </div>
                     </div>
-                </article>
-                <article class="product">
-                    <img src="img/grafite.jpg" alt="Spray de Tinta para Grafite">
-                    <h3>Spray de Tinta para Grafite (400ml)</h3>
-                    <p class="description">Perfeito para street art e detalhes em alta cobertura!</p>
-                    <div class="price-info">
-                        <p class="price">R$ 29,90</p>
-                        <a href="produto.html?id=7" class="btn btn-primary">Ver detalhes</a>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/produtos/grafite.jpg" class="card-img-top" alt="Spray de Tinta para Grafite">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Spray de Tinta para Grafite (400ml)</h5>
+                            <p class="card-text">Perfeito para street art e detalhes em alta cobertura!</p>
+                            <p class="price fw-bold">R$ 29,90</p>
+                            <a href="produto.html?id=7" class="btn btn-primary mt-auto">Ver detalhes</a>
+                        </div>
                     </div>
-                </article>
-                <article class="product">
-                    <img src="img/tela.jpg" alt="Tela para Pintura">
-                    <h3>Tela para Pintura (40x50cm)</h3>
-                    <p class="description">Superfície premium para suas obras em acrílico ou óleo!</p>
-                    <div class="price-info">
-                        <p class="price">R$ 29,90</p>
-                        <a href="produto.html?id=8" class="btn btn-primary">Ver detalhes</a>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/produtos/tela.jpg" class="card-img-top" alt="Tela para Pintura">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Tela para Pintura (40x50cm)</h5>
+                            <p class="card-text">Superfície premium para suas obras em acrílico ou óleo!</p>
+                            <p class="price fw-bold">R$ 29,90</p>
+                            <a href="produto.html?id=8" class="btn btn-primary mt-auto">Ver detalhes</a>
+                        </div>
                     </div>
-                </article>
-                <article class="product">
-                    <img src="img/canson.jpg" alt="Bloco de Papel Canson">
-                    <h3>Bloco de Papel Canson A4 (50 folhas)</h3>
-                    <p class="description">Alta gramatura para técnicas secas ou úmidas!</p>
-                    <div class="price-info">
-                        <p class="price">R$ 29,90</p>
-                        <a href="produto.html?id=9" class="btn btn-primary">Ver detalhes</a>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/produtos/canson.jpg" class="card-img-top" alt="Bloco de Papel Canson">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Bloco de Papel Canson A4 (50 folhas)</h5>
+                            <p class="card-text">Alta gramatura para técnicas secas ou úmidas!</p>
+                            <p class="price fw-bold">R$ 29,90</p>
+                            <a href="produto.html?id=9" class="btn btn-primary mt-auto">Ver detalhes</a>
+                        </div>
                     </div>
-                </article>
-                <article class="product">
-                    <img src="img/papel_aquarela.jpg" alt="Papel para Aquarela">
-                    <h3>Papel para Aquarela 300g/m² (30x40cm)</h3>
-                    <p class="description">Absorção perfeita sem ondulações!</p>
-                    <div class="price-info">
-                        <p class="price">R$ 29,90</p>
-                        <a href="produto.html?id=10" class="btn btn-primary">Ver detalhes</a>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/produtos/papel_aquarela.jpg" class="card-img-top" alt="Papel para Aquarela">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Papel para Aquarela 300g/m² (30x40cm)</h5>
+                            <p class="card-text">Absorção perfeita sem ondulações!</p>
+                            <p class="price fw-bold">R$ 29,90</p>
+                            <a href="produto.html?id=10" class="btn btn-primary mt-auto">Ver detalhes</a>
+                        </div>
                     </div>
-                </article>
+                </div>
             </div>
         </section>
-        
-        <section class="newsletter">
-            <h2>Assine nossa Newsletter</h2>
-            <p>Fique por dentro das novidades, promoções exclusivas e dicas para artistas.</p>
-            <form class="newsletter-form">
-                <input type="email" placeholder="Seu melhor e-mail" required>
-                <button type="submit">Assinar</button>
-            </form>
-        </section>
     </main>
-    
-    <footer>
+    <footer style="background: linear-gradient(90deg, #42213D 50%, #BD4089 100%);">
+        <!-- seção de redes sociais e informações do rodapé -->
         <div class="social-media">
             <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
             <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
@@ -143,7 +208,8 @@
         <p>GalArts - Materiais Artísticos de Qualidade</p>
         <p>&copy; 2025 GalArts. Todos os direitos reservados.</p>
     </footer>
-    
+    <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/scripts.js"></script>
 </body>
+
 </html>

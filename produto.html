@@ -1,113 +1,218 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="img/logo.ico">
+    <meta name="keywords" content="Arte, Loja, Materiais, Site, Website">
+    <link rel="icon" type="image/x-icon" href="img/estrutura/logo.ico">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Detalhes do Produto - GalArts</title>
+    <style>
+        body {
+            background: #e5e5ea;
+        }
+
+        .product-detail {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 992px) {
+
+            .product-images,
+            .product-info {
+                min-height: 520px;
+            }
+        }
+    </style>
 </head>
+
 <body>
     <header>
-        <div class="logo">
-            <h1>GalArts</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="categorias.html">Categorias</a></li>
-                <li><a href="produtos.html">Produtos</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main>
-        <section class="product-detail">
-            <div class="product-images">
-                <img src="img/aquarela.jpg" alt="Aquarela em Pastilhas" class="main-image">
-                <div class="thumbnail-container">
-                    <img src="img/aquarela.jpg" alt="Imagem principal" class="thumbnail active">
-                    <img src="img/oleo.jpg" alt="Visualização em uso" class="thumbnail">
-                    <img src="img/acrilica.jpg" alt="Detalhe das cores" class="thumbnail">
-                </div>
-            </div>
-            <div class="product-info">
-                <h1>Aquarela em Pastilhas</h1>
-                <p class="product-code">Código: AQP24</p>
-                <div class="price-container" style="text-align: center;">
-                    <p class="price" style="margin: 0 0 5px 0;">R$ 89,90</p>
-                    <p style="margin: 0;">ou 5x de R$ 17,98 sem juros</p>
-                </div>
-                <div class="product-description">
-                    <p>Conjunto profissional de aquarela em pastilhas com 24 cores vibrantes. Ideal para artistas de todos os níveis, desde iniciantes até profissionais. Estas aquarelas oferecem alta pigmentação, excelente solubilidade em água e cores duradouras mesmo após a secagem.</p>
-                </div>
-                <div class="product-features">
-                    <h3>Características</h3>
-                    <ul>
-                        <li>24 cores de alta qualidade</li>
-                        <li>Pigmentos concentrados de qualidade profissional</li>
-                        <li>Excelente solubilidade em água</li>
-                        <li>Cores vibrantes e duradouras</li>
-                        <li>Pastilhas recarregáveis</li>
-                        <li>Estojo compacto com espaço para mistura</li>
+        <!-- barra de navegação principal do site -->
+        <nav class="navbar navbar-expand-lg navbar-custom w-100" style="box-shadow: 0 2px 4px rgb(255, 255, 255);">
+            <div class="container-fluid px-4">
+                <!-- link para a página inicial -->
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    GalArts
+                </a>
+                <!-- botão para menu responsivo -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- links de navegação do menu -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="categorias.html">Categorias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="produtos.html">Produtos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="carrinho.html">Carrinho</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="meus-pedidos.html">Meus Pedidos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="depoimentos.html">Depoimentos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ajuda.html">Ajuda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">Login</a>
+                        </li>
                     </ul>
                 </div>
-                <div class="add-to-cart">
-                    <div class="quantity">
-                        <button class="quantity-btn">-</button>
-                        <input type="number" value="1" min="1">
-                        <button class="quantity-btn">+</button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- seção com detalhes do produto selecionado -->
+        <div class="container py-4">
+            <section class="product-detail">
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-5 d-flex align-items-center justify-content-center">
+                        <div
+                            class="product-images text-center bg-white rounded shadow-sm p-4 mb-4 w-100 d-flex flex-column justify-content-center">
+                            <img src="img/produtos/aquarela.jpg" alt="Aquarela em Pastilhas"
+                                class="main-image img-fluid rounded mb-3 border mx-auto"
+                                style="max-height: 420px; min-height: 320px; object-fit: contain; width: 100%; max-width: 420px;">
+                            <div class="thumbnail-container d-flex justify-content-center gap-2">
+                                <img src="img/produtos/aquarela.jpg" alt="Imagem principal"
+                                    class="thumbnail active img-thumbnail"
+                                    style="width: 70px; height: 70px; object-fit: cover;">
+                                <img src="img/produtos/oleo.jpg" alt="Visualização em uso"
+                                    class="thumbnail img-thumbnail"
+                                    style="width: 70px; height: 70px; object-fit: cover;">
+                                <img src="img/produtos/acrilica.jpg" alt="Detalhe das cores"
+                                    class="thumbnail img-thumbnail"
+                                    style="width: 70px; height: 70px; object-fit: cover;">
+                            </div>
+                        </div>
                     </div>
-                    <button class="btn btn-primary">Adicionar ao Carrinho</button>
+                    <div class="col-lg-7 d-flex align-items-center">
+                        <div class="product-info bg-white rounded shadow-sm p-4 mb-4 w-100">
+                            <h1 class="fw-bold mb-2">Aquarela em Pastilhas</h1>
+                            <p class="product-code text-muted mb-2">Código: AQP24</p>
+                            <div class="price-container text-center mb-3">
+                                <p class="price fs-3 fw-bold text-success mb-1">R$ 89,90</p>
+                                <p class="mb-0">ou 5x de R$ 17,98 sem juros</p>
+                            </div>
+                            <div class="product-description mb-3">
+                                <p>Conjunto profissional de aquarela em pastilhas com 24 cores vibrantes. Ideal para
+                                    artistas de todos os níveis, desde iniciantes até profissionais. Estas aquarelas
+                                    oferecem alta pigmentação, excelente solubilidade em água e cores duradouras mesmo
+                                    após a secagem.</p>
+                            </div>
+                            <div class="product-features mb-3">
+                                <h3 class="h5">Características</h3>
+                                <ul class="list-unstyled ms-3">
+                                    <li>24 cores de alta qualidade</li>
+                                    <li>Pigmentos concentrados de qualidade profissional</li>
+                                    <li>Excelente solubilidade em água</li>
+                                    <li>Cores vibrantes e duradouras</li>
+                                    <li>Pastilhas recarregáveis</li>
+                                    <li>Estojo compacto com espaço para mistura</li>
+                                </ul>
+                            </div>
+                            <div class="add-to-cart mb-3">
+                                <div class="quantity d-inline-flex align-items-center me-2">
+                                    <button class="quantity-btn btn btn-outline-secondary px-2 py-1">-</button>
+                                    <input type="number" value="1" min="1" class="form-control mx-2"
+                                        style="width: 60px;">
+                                    <button class="quantity-btn btn btn-outline-secondary px-2 py-1">+</button>
+                                </div>
+                                <button class="btn btn-primary">Adicionar ao Carrinho</button>
+                            </div>
+                            <!-- accordion de pergunta frequente -->
+                            <div class="accordion mt-4" id="faqAccordion">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                            aria-expanded="false" aria-controls="collapseOne">
+                                            <span class="faq-question">Pergunta frequente do produto</span>
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse"
+                                        aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body faq-answer">
+                                            <!-- conteúdo da resposta será atualizado via JS -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </section>
-        
-        <section class="product-list">
-            <h2 class="section-title">Produtos Relacionados</h2>
-            <div class="products">
-                <article class="product">
-                    <img src="img/papel_aquarela.jpg" alt="Papel para Aquarela">
-                    <h3>Papel para Aquarela 300g/m²</h3>
-                    <p class="description">Absorção perfeita sem ondulações!</p>
-                    <div class="price-info">
-                        <p class="price">R$ 29,90</p>
-                        <a href="produto.html?id=10" class="btn btn-primary">Ver detalhes</a>
+            </section>
+            <!-- seção de produtos relacionados -->
+            <section class="related-products container mb-5">
+                <h2 class="section-title">Produtos Relacionados</h2>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
+                    <div class="col">
+                        <div class="card h-100">
+                            <span class="badge bg-danger position-absolute top-0 start-0 m-2">-15%</span>
+                            <img src="img/produtos/acrilica.jpg" class="card-img-top" alt="Tinta Acrílica">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Tinta Acrílica</h5>
+                                <p class="card-text">Cores vibrantes, secagem rápida, embalagem de 120ml.</p>
+                                <p class="price fw-bold">R$ 18,90</p>
+                                <a href="produto.html?id=2" class="btn btn-primary mt-auto">Ver detalhes</a>
+                            </div>
+                        </div>
                     </div>
-                </article>
-                <article class="product">
-                    <img src="img/pincel.jpg" alt="Kit Pincéis Sintéticos">
-                    <h3>Kit Pincéis Sintéticos</h3>
-                    <p class="description">7 unidades, ideal para aquarela.</p>
-                    <div class="price-info">
-                        <p class="price">R$ 69,90</p>
-                        <a href="produto.html?id=4" class="btn btn-primary">Ver detalhes</a>
+                    <div class="col">
+                        <div class="card h-100">
+                            <span class="badge bg-danger position-absolute top-0 start-0 m-2">-10%</span>
+                            <img src="img/produtos/oleo.jpg" class="card-img-top" alt="Tinta a Óleo">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Tinta a Óleo</h5>
+                                <p class="card-text">Cores ricas e profundas, tubo de 200ml.</p>
+                                <p class="price fw-bold">R$ 44,90</p>
+                                <a href="produto.html?id=3" class="btn btn-primary mt-auto">Ver detalhes</a>
+                            </div>
+                        </div>
                     </div>
-                </article>
-                <article class="product">
-                    <img src="img/pincel_marta.jpg" alt="Pincel para Detalhes">
-                    <h3>Pincel para Detalhes</h3>
-                    <p class="description">Precisão para miniaturas e retratos.</p>
-                    <div class="price-info">
-                        <p class="price">R$ 32,00</p>
-                        <a href="produto.html?id=5" class="btn btn-primary">Ver detalhes</a>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="img/produtos/pincel.jpg" class="card-img-top" alt="Kit Pincéis Sintéticos">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Kit Pincéis Sintéticos</h5>
+                                <p class="card-text">7 unidades, ideal para aquarela.</p>
+                                <p class="price fw-bold">R$ 69,90</p>
+                                <a href="produto.html?id=4" class="btn btn-primary mt-auto">Ver detalhes</a>
+                            </div>
+                        </div>
                     </div>
-                </article>
-                <article class="product">
-                    <img src="img/canson.jpg" alt="Bloco de Papel Canson">
-                    <h3>Bloco de Papel Canson A4</h3>
-                    <p class="description">50 folhas, alta gramatura.</p>
-                    <div class="price-info">
-                        <p class="price">R$ 29,90</p>
-                        <a href="produto.html?id=9" class="btn btn-primary">Ver detalhes</a>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="img/produtos/papel_aquarela.jpg" class="card-img-top"
+                                alt="Papel para Aquarela 300g/m²">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Papel para Aquarela 300g/m²</h5>
+                                <p class="card-text">Absorção perfeita sem ondulações!</p>
+                                <p class="price fw-bold">R$ 29,90</p>
+                                <a href="produto.html?id=10" class="btn btn-primary mt-auto">Ver detalhes</a>
+                            </div>
+                        </div>
                     </div>
-                </article>
-            </div>
-        </section>
+                </div>
+            </section>
+        </div>
     </main>
-    
-    <footer>
+    <footer style="background: linear-gradient(90deg, #42213D 50%, #BD4089 100%);">
+        <!-- seção de redes sociais e informações do rodapé -->
         <div class="social-media">
             <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
             <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
@@ -117,198 +222,84 @@
         <p>GalArts - Materiais Artísticos de Qualidade</p>
         <p>&copy; 2025 GalArts. Todos os direitos reservados.</p>
     </footer>
-    
+    <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/scripts.js"></script>
     <script>
-        // Script to update product page based on URL parameter
-        document.addEventListener('DOMContentLoaded', function() {
+        // script dinâmico para exibir informações do produto conforme o id na url
+        (function () {
             const urlParams = new URLSearchParams(window.location.search);
             const productId = urlParams.get('id');
-            
-            // Only proceed if we have a product ID
             if (!productId) return;
-            
-            // Product data (in a real site, this would come from a database)
             const products = {
-                '1': {
-                    name: 'Aquarela em Pastilhas',
-                    code: 'AQP24',
-                    price: 'R$ 89,90',
-                    description: 'Conjunto profissional de aquarela em pastilhas com 24 cores vibrantes. Ideal para artistas de todos os níveis, desde iniciantes até profissionais.',
-                    mainImage: 'img/aquarela.jpg',
-                    features: [
-                        '24 cores de alta qualidade',
-                        'Pigmentos concentrados de qualidade profissional',
-                        'Excelente solubilidade em água',
-                        'Cores vibrantes e duradouras',
-                        'Pastilhas recarregáveis',
-                        'Estojo compacto com espaço para mistura'
-                    ]
-                },
-                '2': {
-                    name: 'Tinta Acrílica',
-                    code: 'TAC120',
-                    price: 'R$ 18,90',
-                    description: 'Tinta acrílica de alta qualidade com cores vibrantes e secagem rápida. Perfeita para diversas superfícies, incluindo tela, papel e madeira.',
-                    mainImage: 'img/acrilica.jpg',
-                    features: [
-                        'Cores vibrantes',
-                        'Secagem rápida',
-                        'Embalagem de 120ml',
-                        'À base de água',
-                        'Acabamento semibrilhante',
-                        'Compatível com diversas superfícies'
-                    ]
-                },
-                '3': {
-                    name: 'Tinta a Óleo',
-                    code: 'TOL200',
-                    price: 'R$ 44,90',
-                    description: 'Tubo de tinta a óleo de 200ml, ideal para técnicas de empasto e pintura tradicional. Oferece cores ricas e profundas com excelente durabilidade.',
-                    mainImage: 'img/oleo.jpg',
-                    features: [
-                        'Tubo de 200ml',
-                        'Alta concentração de pigmentos',
-                        'Excelente cobertura',
-                        'Ideal para técnicas de empasto',
-                        'Secagem lenta para maior tempo de trabalho',
-                        'Cores duradouras e resistentes à luz'
-                    ]
-                },
-                '4': {
-                    name: 'Kit Pincéis Sintéticos',
-                    code: 'KPS07',
-                    price: 'R$ 69,90',
-                    description: 'Conjunto com 7 pincéis sintéticos de alta qualidade, com cabos ergonômicos de madeira e uma variedade de formatos para diferentes técnicas de pintura.',
-                    mainImage: 'img/pincel.jpg',
-                    features: [
-                        '7 pincéis de diferentes tamanhos',
-                        'Cerdas sintéticas de alta qualidade',
-                        'Cabo de madeira ergonômico',
-                        'Variedade de formatos (plano, redondo, leque)',
-                        'Ideal para acrílica, óleo e aquarela',
-                        'Fácil limpeza e manutenção'
-                    ]
-                },
-                '5': {
-                    name: 'Pincel para Detalhes em Pelo de Marta',
-                    code: 'PDM03',
-                    price: 'R$ 32,00',
-                    description: 'Pincel de precisão feito com pelo de marta, ideal para detalhes minuciosos em miniaturas, retratos e trabalhos que exigem acabamento perfeito.',
-                    mainImage: 'img/pincel_marta.jpg',
-                    features: [
-                        'Pelo natural de marta',
-                        'Ponta fina para detalhes precisos',
-                        'Retenção ideal de água e tinta',
-                        'Cabo balanceado para maior controle',
-                        'Ferrule de metal resistente à corrosão',
-                        'Excelente para aquarela e tinta acrílica diluída'
-                    ]
-                },
-                '6': {
-                    name: 'Lápis Profissional',
-                    code: 'LPR12',
-                    price: 'R$ 29,90',
-                    description: 'Caixa com 12 lápis de grafite de diferentes graduações para desenho profissional. Perfeito para esboços, sombreamento e detalhes.',
-                    mainImage: 'img/lapis.jpg',
-                    features: [
-                        'Conjunto com 12 lápis de diferentes graduações',
-                        'Grafite de alta qualidade',
-                        'Madeira sustentável',
-                        'Fácil de afiar',
-                        'Boa relação entre maciez e durabilidade',
-                        'Estojo protetor incluso'
-                    ]
-                },
-                '7': {
-                    name: 'Spray de Tinta para Grafite',
-                    code: 'STG400',
-                    price: 'R$ 29,90',
-                    description: 'Spray de tinta de alta qualidade com 400ml, ideal para arte urbana e grafite. Proporciona acabamento uniforme com excelente cobertura.',
-                    mainImage: 'img/grafite.jpg',
-                    features: [
-                        'Volume de 400ml',
-                        'Secagem rápida',
-                        'Excelente cobertura',
-                        'Cores vibrantes',
-                        'Válvula de alta precisão',
-                        'Resistente às intempéries'
-                    ]
-                },
-                '8': {
-                    name: 'Tela para Pintura',
-                    code: 'TP4050',
-                    price: 'R$ 29,90',
-                    description: 'Tela de alta qualidade no tamanho 40x50cm, ideal para pinturas em óleo e acrílica. Superfície tratada para melhor aderência da tinta.',
-                    mainImage: 'img/tela.jpg',
-                    features: [
-                        'Tamanho 40x50cm',
-                        'Tecido 100% algodão',
-                        'Tratamento anti-acidez',
-                        'Gramatura de 380g/m²',
-                        'Chassis em pinus selecionado',
-                        'Preparada com gesso acrílico'
-                    ]
-                },
-                '9': {
-                    name: 'Bloco de Papel Canson A4',
-                    code: 'BPC50',
-                    price: 'R$ 29,90',
-                    description: 'Bloco de papel Canson com 50 folhas formato A4, ideal para desenhos, esboços e técnicas mistas. Alta gramatura para maior durabilidade.',
-                    mainImage: 'img/canson.jpg',
-                    features: [
-                        '50 folhas formato A4 (210 x 297mm)',
-                        'Gramatura de 224g/m²',
-                        'Textura levemente granulada',
-                        'Papel acid-free (pH neutro)',
-                        'Ideal para técnicas secas e húmidas',
-                        'Encadernação em espiral'
-                    ]
-                },
-                '10': {
-                    name: 'Papel para Aquarela 300g/m²',
-                    code: 'PA3040',
-                    price: 'R$ 29,90',
-                    description: 'Papel de alta gramatura (300g/m²) ideal para aquarela, com textura que proporciona excelente absorção e distribuição da tinta.',
-                    mainImage: 'img/papel_aquarela.jpg',
-                    features: [
-                        'Folhas no formato 30x40cm',
-                        'Gramatura de 300g/m²',
-                        'Textura cold pressed',
-                        'pH neutro',
-                        'Alta resistência à umidade',
-                        '100% celulose, livre de ácidos'
-                    ]
-                }
+                '1': { name: 'Aquarela em Pastilhas', code: 'AQP24', price: 'R$ 89,90', description: 'Conjunto profissional de aquarela em pastilhas com 24 cores vibrantes. Ideal para artistas de todos os níveis, desde iniciantes até profissionais.', mainImage: 'img/produtos/aquarela.jpg', features: ['24 cores de alta qualidade', 'Pigmentos concentrados de qualidade profissional', 'Excelente solubilidade em água', 'Cores vibrantes e duradouras', 'Pastilhas recarregáveis', 'Estojo compacto com espaço para mistura'] },
+                '2': { name: 'Tinta Acrílica', code: 'TAC120', price: 'R$ 18,90', description: 'Tinta acrílica de alta qualidade com cores vibrantes e secagem rápida. Perfeita para diversas superfícies, incluindo tela, papel e madeira.', mainImage: 'img/produtos/acrilica.jpg', features: ['Cores vibrantes', 'Secagem rápida', 'Embalagem de 120ml', 'À base de água', 'Acabamento semibrilhante', 'Compatível com diversas superfícies'] },
+                '3': { name: 'Tinta a Óleo', code: 'TOL200', price: 'R$ 44,90', description: 'Tubo de tinta a óleo de 200ml, ideal para técnicas de empasto e pintura tradicional. Oferece cores ricas e profundas com excelente durabilidade.', mainImage: 'img/produtos/oleo.jpg', features: ['Tubo de 200ml', 'Alta concentração de pigmentos', 'Excelente cobertura', 'Ideal para técnicas de empasto', 'Secagem lenta para maior tempo de trabalho', 'Cores duradouras e resistentes à luz'] },
+                '4': { name: 'Kit Pincéis Sintéticos', code: 'KPS07', price: 'R$ 69,90', description: 'Conjunto com 7 pincéis sintéticos de alta qualidade, com cabos ergonômicos de madeira e uma variedade de formatos para diferentes técnicas de pintura.', mainImage: 'img/produtos/pincel.jpg', features: ['7 pincéis de diferentes tamanhos', 'Cerdas sintéticas de alta qualidade', 'Cabo de madeira ergonômico', 'Variedade de formatos (plano, redondo, leque)', 'Ideal para acrílica, óleo e aquarela', 'Fácil limpeza e manutenção'] },
+                '5': { name: 'Pincel para Detalhes em Pelo de Marta', code: 'PDM03', price: 'R$ 32,00', description: 'Pincel de precisão feito com pelo de marta, ideal para detalhes minuciosos em miniaturas, retratos e trabalhos que exigem acabamento perfeito.', mainImage: 'img/produtos/pincel_marta.jpg', features: ['Pelo natural de marta', 'Ponta fina para detalhes precisos', 'Retenção ideal de água e tinta', 'Cabo balanceado para maior controle', 'Ferrule de metal resistente à corrosão', 'Excelente para aquarela e tinta acrílica diluída'] },
+                '6': { name: 'Lápis Profissional', code: 'LPR12', price: 'R$ 29,90', description: 'Caixa com 12 lápis de grafite de diferentes graduações para desenho profissional. Perfeito para esboços, sombreamento e detalhes.', mainImage: 'img/produtos/lapis.jpg', features: ['Conjunto com 12 lápis de diferentes graduações', 'Grafite de alta qualidade', 'Madeira sustentável', 'Fácil de afiar', 'Boa relação entre maciez e durabilidade', 'Estojo protetor incluso'] },
+                '7': { name: 'Spray de Tinta para Grafite', code: 'STG400', price: 'R$ 29,90', description: 'Spray de tinta de alta qualidade com 400ml, ideal para arte urbana e grafite. Proporciona acabamento uniforme com excelente cobertura.', mainImage: 'img/produtos/grafite.jpg', features: ['Volume de 400ml', 'Secagem rápida', 'Excelente cobertura', 'Cores vibrantes', 'Válvula de alta precisão', 'Resistente às intempéries'] },
+                '8': { name: 'Tela para Pintura', code: 'TP4050', price: 'R$ 29,90', description: 'Tela de alta qualidade no tamanho 40x50cm, ideal para pinturas em óleo e acrílica. Superfície tratada para melhor aderência da tinta.', mainImage: 'img/produtos/tela.jpg', features: ['Tamanho 40x50cm', 'Tecido 100% algodão', 'Tratamento anti-acidez', 'Gramatura de 380g/m²', 'Chassis em pinus selecionado', 'Preparada com gesso acrílico'] },
+                '9': { name: 'Bloco de Papel Canson A4', code: 'BPC50', price: 'R$ 29,90', description: 'Bloco de papel Canson com 50 folhas formato A4, ideal para desenhos, esboços e técnicas mistas. Alta gramatura para maior durabilidade.', mainImage: 'img/produtos/canson.jpg', features: ['50 folhas formato A4 (210 x 297mm)', 'Gramatura de 224g/m²', 'Textura levemente granulada', 'Papel acid-free (pH neutro)', 'Ideal para técnicas secas e húmidas', 'Encadernação em espiral'] },
+                '10': { name: 'Papel para Aquarela 300g/m²', code: 'PA3040', price: 'R$ 29,90', description: 'Papel de alta gramatura (300g/m²) ideal para aquarela, com textura que proporciona excelente absorção e distribuição da tinta.', mainImage: 'img/produtos/papel_aquarela.jpg', features: ['Folhas no formato 30x40cm', 'Gramatura de 300g/m²', 'Textura cold pressed', 'pH neutro', 'Alta resistência à umidade', '100% celulose, livre de ácidos'] }
             };
-            
-            // Update page with product info if product exists
+            const productFaqs = {
+                '1': { question: 'Como conservar as aquarelas em pastilhas?', answer: 'Para conservar suas aquarelas, mantenha o estojo fechado após o uso, evite deixar as pastilhas molhadas por muito tempo e limpe os pincéis antes de guardá-los. Assim, as cores permanecem vivas e as pastilhas duram mais tempo.' },
+                '2': { question: 'A tinta acrílica é resistente à água após secar?', answer: 'Sim, após a secagem completa, a tinta acrílica se torna resistente à água, ideal para trabalhos duradouros em diversas superfícies.' },
+                '3': { question: 'A tinta a óleo pode ser usada em papel comum?', answer: 'O ideal é utilizar a tinta a óleo em telas ou papéis próprios para óleo, pois papéis comuns podem absorver o óleo e deformar.' },
+                '4': { question: 'Os pincéis sintéticos servem para aquarela?', answer: 'Sim, os pincéis sintéticos deste kit são ideais para aquarela, além de servirem para tinta acrílica e óleo.' },
+                '5': { question: 'O pincel de pelo de marta é indicado para detalhes?', answer: 'Sim, o pelo de marta proporciona precisão e retenção de tinta, sendo perfeito para detalhes minuciosos.' },
+                '6': { question: 'Os lápis vêm apontados?', answer: 'Sim, todos os lápis do conjunto já vêm apontados e prontos para uso.' },
+                '7': { question: 'O spray de tinta pode ser usado em ambientes fechados?', answer: 'Recomenda-se o uso do spray em ambientes ventilados para evitar inalação de vapores.' },
+                '8': { question: 'A tela já vem preparada para uso?', answer: 'Sim, a tela já vem preparada com gesso acrílico e pode ser usada imediatamente.' },
+                '9': { question: 'O papel Canson aceita aquarela?', answer: 'Sim, o papel Canson é versátil e aceita técnicas secas e húmidas, incluindo aquarela leve.' },
+                '10': { question: 'O papel para aquarela é acid-free?', answer: 'Sim, é livre de ácidos e possui alta resistência à umidade.' }
+            };
             const product = products[productId];
             if (product) {
-                // Update page title
                 document.title = `${product.name} - GalArts`;
-                
-                // Update product details
-                document.querySelector('.product-info h1').textContent = product.name;
-                document.querySelector('.product-code').textContent = `Código: ${product.code}`;
-                document.querySelector('.product-description p').textContent = product.description;
-                document.querySelector('.main-image').src = product.mainImage;
-                document.querySelector('.thumbnail.active').src = product.mainImage;
-                
-                // Update price
+                const infoTitle = document.querySelector('.product-info h1');
+                if (infoTitle) infoTitle.textContent = product.name;
+                const code = document.querySelector('.product-code');
+                if (code) code.textContent = `Código: ${product.code}`;
+                const desc = document.querySelector('.product-description p');
+                if (desc) desc.textContent = product.description;
+                const mainImg = document.querySelector('.main-image');
+                if (mainImg) mainImg.src = product.mainImage;
+                // Atualiza thumbnails
+                const thumbnails = document.querySelectorAll('.thumbnail');
+                if (thumbnails.length > 0) {
+                    thumbnails.forEach((thumb, idx) => {
+                        thumb.classList.remove('active');
+                        // se quiser thumbnails diferentes, personalize aqui. por padrão, usa a imagem principal.
+                        thumb.src = product.mainImage;
+                        if (idx === 0) thumb.classList.add('active');
+                    });
+                }
                 const priceContainer = document.querySelector('.price-container');
-                priceContainer.querySelector('.price').textContent = product.price;
-                
-                // Update features
+                if (priceContainer) {
+                    const price = priceContainer.querySelector('.price');
+                    if (price) price.textContent = product.price;
+                }
                 const featuresList = document.querySelector('.product-features ul');
-                featuresList.innerHTML = '';
-                product.features.forEach(feature => {
-                    const li = document.createElement('li');
-                    li.textContent = feature;
-                    featuresList.appendChild(li);
-                });
+                if (featuresList) {
+                    featuresList.innerHTML = '';
+                    product.features.forEach(feature => {
+                        const li = document.createElement('li');
+                        li.textContent = feature;
+                        featuresList.appendChild(li);
+                    });
+                }
+                // FAQ no accordion
+                const faq = productFaqs[productId];
+                if (faq) {
+                    const faqQuestion = document.querySelector('.faq-question');
+                    const faqAnswer = document.querySelector('.faq-answer');
+                    if (faqQuestion) faqQuestion.textContent = faq.question;
+                    if (faqAnswer) faqAnswer.innerHTML = faq.answer;
+                }
             }
-        });
+        })();
     </script>
 </body>
+
 </html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Arte, Loja, Materiais, Site, Website">
+    <link rel="icon" type="image/x-icon" href="img/estrutura/logo.ico">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Carrinho - GalArts</title>
+</head>
+
+<body>
+    <header>
+        <!-- barra de navegação principal do site -->
+        <nav class="navbar navbar-expand-lg navbar-custom w-100" style="box-shadow: 0 2px 4px rgb(255, 255, 255);">
+            <div class="container-fluid px-4">
+                <!-- link para a página inicial -->
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    GalArts
+                </a>
+                <!-- botão para menu responsivo -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- links de navegação do menu -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="categorias.html">Categorias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="produtos.html">Produtos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="carrinho.html">Carrinho</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="meus-pedidos.html">Meus Pedidos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="depoimentos.html">Depoimentos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ajuda.html">Ajuda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container py-5">
+        <h1 class="section-title mb-4">Seu Carrinho</h1>
+        <!-- Carrinho com itens -->
+        <div class="row justify-content-center">
+            <div class="col-lg-8 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table align-middle mb-0">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th scope="col">Produto</th>
+                                        <th scope="col">Preço</th>
+                                        <th scope="col" class="text-center">Quantidade</th>
+                                        <th scope="col">Subtotal</th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <img src="img/produtos/aquarela.jpg" alt="Tinta Acrílica" class="rounded me-2" style="width: 60px; height: 60px; object-fit: contain; background: #fff; border: 1px solid #eee;">
+                                                <span>Aquarela em pastilhas</span>
+                                            </div>
+                                        </td>
+                                        <td class="price">R$ 89,90</td>
+                                        <td class="text-center">
+                                            <div class="d-inline-flex align-items-center quantity">
+                                                <button class="btn btn-secondary btn-sm quantity-btn" type="button">-</button>
+                                                <input type="text" class="form-control form-control-sm text-center mx-1" value="1" style="width: 40px;" readonly>
+                                                <button class="btn btn-secondary btn-sm quantity-btn" type="button">+</button>
+                                            </div>
+                                        </td>
+                                        <td class="price">R$ 89,90</td>
+                                        <td>
+                                            <button class="btn btn-outline-danger btn-sm" title="Remover"><i class="fas fa-trash"></i></button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <img src="img/produtos/acrilica.jpg" alt="Tinta Acrílica" class="rounded me-2" style="width: 60px; height: 60px; object-fit: contain; background: #fff; border: 1px solid #eee;">
+                                                <span>Tinta Acrílica</span>
+                                            </div>
+                                        </td>
+                                        <td class="price">R$ 18,90</td>
+                                        <td class="text-center">
+                                            <div class="d-inline-flex align-items-center quantity">
+                                                <button class="btn btn-secondary btn-sm quantity-btn" type="button">-</button>
+                                                <input type="text" class="form-control form-control-sm text-center mx-1" value="1" style="width: 40px;" readonly>
+                                                <button class="btn btn-secondary btn-sm quantity-btn" type="button">+</button>
+                                            </div>
+                                        </td>
+                                        <td class="price">R$ 18,90</td>
+                                        <td>
+                                            <button class="btn btn-outline-danger btn-sm" title="Remover"><i class="fas fa-trash"></i></button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <img src="img/produtos/oleo.jpg" alt="Tinta Acrílica" class="rounded me-2" style="width: 60px; height: 60px; object-fit: contain; background: #fff; border: 1px solid #eee;">
+                                                <span>Tinta a Óleo</span>
+                                            </div>
+                                        </td>
+                                        <td class="price">R$ 44,90</td>
+                                        <td class="text-center">
+                                            <div class="d-inline-flex align-items-center quantity">
+                                                <button class="btn btn-secondary btn-sm quantity-btn" type="button">-</button>
+                                                <input type="text" class="form-control form-control-sm text-center mx-1" value="1" style="width: 40px;" readonly>
+                                                <button class="btn btn-secondary btn-sm quantity-btn" type="button">+</button>
+                                            </div>
+                                        </td>
+                                        <td class="price">R$ 44,90</td>
+                                        <td>
+                                            <button class="btn btn-outline-danger btn-sm" title="Remover"><i class="fas fa-trash"></i></button>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Resumo do pedido -->
+            <div class="col-lg-4">
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3">Resumo do Pedido</h5>
+                        <ul class="list-group list-group-flush mb-3">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Subtotal
+                                <span class="price">R$ 153,70</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Frete fixo
+                                <span>R$ 24,90</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center fw-bold">
+                                Total
+                                <span class="price">R$ 178,60</span>
+                            </li>
+                        </ul>
+                        <a href="checkout.html" class="btn btn-primary w-100 mb-2">Finalizar Compra</a>
+                        <a href="produtos.html" class="btn btn-secondary w-100">Continuar Comprando</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer style="background: linear-gradient(90deg, #42213D 50%, #BD4089 100%);">
+        <!-- seção de redes sociais e informações do rodapé -->
+        <div class="social-media">
+            <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-pinterest"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p>GalArts - Materiais Artísticos de Qualidade</p>
+        <p>&copy; 2025 GalArts. Todos os direitos reservados.</p>
+    </footer>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
