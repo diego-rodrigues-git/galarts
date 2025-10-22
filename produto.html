@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/logo.ico">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Detalhes do Produto - GalArts</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>GalArts</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="categorias.html">Categorias</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="product-detail">
+            <div class="product-images">
+                <img src="img/aquarela.jpg" alt="Aquarela em Pastilhas" class="main-image">
+                <div class="thumbnail-container">
+                    <img src="img/aquarela.jpg" alt="Imagem principal" class="thumbnail active">
+                    <img src="img/oleo.jpg" alt="Visualização em uso" class="thumbnail">
+                    <img src="img/acrilica.jpg" alt="Detalhe das cores" class="thumbnail">
+                </div>
+            </div>
+            <div class="product-info">
+                <h1>Aquarela em Pastilhas</h1>
+                <p class="product-code">Código: AQP24</p>
+                <div class="price-container" style="text-align: center;">
+                    <p class="price" style="margin: 0 0 5px 0;">R$ 89,90</p>
+                    <p style="margin: 0;">ou 5x de R$ 17,98 sem juros</p>
+                </div>
+                <div class="product-description">
+                    <p>Conjunto profissional de aquarela em pastilhas com 24 cores vibrantes. Ideal para artistas de todos os níveis, desde iniciantes até profissionais. Estas aquarelas oferecem alta pigmentação, excelente solubilidade em água e cores duradouras mesmo após a secagem.</p>
+                </div>
+                <div class="product-features">
+                    <h3>Características</h3>
+                    <ul>
+                        <li>24 cores de alta qualidade</li>
+                        <li>Pigmentos concentrados de qualidade profissional</li>
+                        <li>Excelente solubilidade em água</li>
+                        <li>Cores vibrantes e duradouras</li>
+                        <li>Pastilhas recarregáveis</li>
+                        <li>Estojo compacto com espaço para mistura</li>
+                    </ul>
+                </div>
+                <div class="add-to-cart">
+                    <div class="quantity">
+                        <button class="quantity-btn">-</button>
+                        <input type="number" value="1" min="1">
+                        <button class="quantity-btn">+</button>
+                    </div>
+                    <button class="btn btn-primary">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </section>
+        
+        <section class="product-list">
+            <h2 class="section-title">Produtos Relacionados</h2>
+            <div class="products">
+                <article class="product">
+                    <img src="img/papel_aquarela.jpg" alt="Papel para Aquarela">
+                    <h3>Papel para Aquarela 300g/m²</h3>
+                    <p class="description">Absorção perfeita sem ondulações!</p>
+                    <div class="price-info">
+                        <p class="price">R$ 29,90</p>
+                        <a href="produto.html?id=10" class="btn btn-primary">Ver detalhes</a>
+                    </div>
+                </article>
+                <article class="product">
+                    <img src="img/pincel.jpg" alt="Kit Pincéis Sintéticos">
+                    <h3>Kit Pincéis Sintéticos</h3>
+                    <p class="description">7 unidades, ideal para aquarela.</p>
+                    <div class="price-info">
+                        <p class="price">R$ 69,90</p>
+                        <a href="produto.html?id=4" class="btn btn-primary">Ver detalhes</a>
+                    </div>
+                </article>
+                <article class="product">
+                    <img src="img/pincel_marta.jpg" alt="Pincel para Detalhes">
+                    <h3>Pincel para Detalhes</h3>
+                    <p class="description">Precisão para miniaturas e retratos.</p>
+                    <div class="price-info">
+                        <p class="price">R$ 32,00</p>
+                        <a href="produto.html?id=5" class="btn btn-primary">Ver detalhes</a>
+                    </div>
+                </article>
+                <article class="product">
+                    <img src="img/canson.jpg" alt="Bloco de Papel Canson">
+                    <h3>Bloco de Papel Canson A4</h3>
+                    <p class="description">50 folhas, alta gramatura.</p>
+                    <div class="price-info">
+                        <p class="price">R$ 29,90</p>
+                        <a href="produto.html?id=9" class="btn btn-primary">Ver detalhes</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="social-media">
+            <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-pinterest"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p>GalArts - Materiais Artísticos de Qualidade</p>
+        <p>&copy; 2025 GalArts. Todos os direitos reservados.</p>
+    </footer>
+    
+    <script src="js/scripts.js"></script>
+    <script>
+        // Script to update product page based on URL parameter
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = urlParams.get('id');
+            
+            // Only proceed if we have a product ID
+            if (!productId) return;
+            
+            // Product data (in a real site, this would come from a database)
+            const products = {
+                '1': {
+                    name: 'Aquarela em Pastilhas',
+                    code: 'AQP24',
+                    price: 'R$ 89,90',
+                    description: 'Conjunto profissional de aquarela em pastilhas com 24 cores vibrantes. Ideal para artistas de todos os níveis, desde iniciantes até profissionais.',
+                    mainImage: 'img/aquarela.jpg',
+                    features: [
+                        '24 cores de alta qualidade',
+                        'Pigmentos concentrados de qualidade profissional',
+                        'Excelente solubilidade em água',
+                        'Cores vibrantes e duradouras',
+                        'Pastilhas recarregáveis',
+                        'Estojo compacto com espaço para mistura'
+                    ]
+                },
+                '2': {
+                    name: 'Tinta Acrílica',
+                    code: 'TAC120',
+                    price: 'R$ 18,90',
+                    description: 'Tinta acrílica de alta qualidade com cores vibrantes e secagem rápida. Perfeita para diversas superfícies, incluindo tela, papel e madeira.',
+                    mainImage: 'img/acrilica.jpg',
+                    features: [
+                        'Cores vibrantes',
+                        'Secagem rápida',
+                        'Embalagem de 120ml',
+                        'À base de água',
+                        'Acabamento semibrilhante',
+                        'Compatível com diversas superfícies'
+                    ]
+                },
+                '3': {
+                    name: 'Tinta a Óleo',
+                    code: 'TOL200',
+                    price: 'R$ 44,90',
+                    description: 'Tubo de tinta a óleo de 200ml, ideal para técnicas de empasto e pintura tradicional. Oferece cores ricas e profundas com excelente durabilidade.',
+                    mainImage: 'img/oleo.jpg',
+                    features: [
+                        'Tubo de 200ml',
+                        'Alta concentração de pigmentos',
+                        'Excelente cobertura',
+                        'Ideal para técnicas de empasto',
+                        'Secagem lenta para maior tempo de trabalho',
+                        'Cores duradouras e resistentes à luz'
+                    ]
+                },
+                '4': {
+                    name: 'Kit Pincéis Sintéticos',
+                    code: 'KPS07',
+                    price: 'R$ 69,90',
+                    description: 'Conjunto com 7 pincéis sintéticos de alta qualidade, com cabos ergonômicos de madeira e uma variedade de formatos para diferentes técnicas de pintura.',
+                    mainImage: 'img/pincel.jpg',
+                    features: [
+                        '7 pincéis de diferentes tamanhos',
+                        'Cerdas sintéticas de alta qualidade',
+                        'Cabo de madeira ergonômico',
+                        'Variedade de formatos (plano, redondo, leque)',
+                        'Ideal para acrílica, óleo e aquarela',
+                        'Fácil limpeza e manutenção'
+                    ]
+                },
+                '5': {
+                    name: 'Pincel para Detalhes em Pelo de Marta',
+                    code: 'PDM03',
+                    price: 'R$ 32,00',
+                    description: 'Pincel de precisão feito com pelo de marta, ideal para detalhes minuciosos em miniaturas, retratos e trabalhos que exigem acabamento perfeito.',
+                    mainImage: 'img/pincel_marta.jpg',
+                    features: [
+                        'Pelo natural de marta',
+                        'Ponta fina para detalhes precisos',
+                        'Retenção ideal de água e tinta',
+                        'Cabo balanceado para maior controle',
+                        'Ferrule de metal resistente à corrosão',
+                        'Excelente para aquarela e tinta acrílica diluída'
+                    ]
+                },
+                '6': {
+                    name: 'Lápis Profissional',
+                    code: 'LPR12',
+                    price: 'R$ 29,90',
+                    description: 'Caixa com 12 lápis de grafite de diferentes graduações para desenho profissional. Perfeito para esboços, sombreamento e detalhes.',
+                    mainImage: 'img/lapis.jpg',
+                    features: [
+                        'Conjunto com 12 lápis de diferentes graduações',
+                        'Grafite de alta qualidade',
+                        'Madeira sustentável',
+                        'Fácil de afiar',
+                        'Boa relação entre maciez e durabilidade',
+                        'Estojo protetor incluso'
+                    ]
+                },
+                '7': {
+                    name: 'Spray de Tinta para Grafite',
+                    code: 'STG400',
+                    price: 'R$ 29,90',
+                    description: 'Spray de tinta de alta qualidade com 400ml, ideal para arte urbana e grafite. Proporciona acabamento uniforme com excelente cobertura.',
+                    mainImage: 'img/grafite.jpg',
+                    features: [
+                        'Volume de 400ml',
+                        'Secagem rápida',
+                        'Excelente cobertura',
+                        'Cores vibrantes',
+                        'Válvula de alta precisão',
+                        'Resistente às intempéries'
+                    ]
+                },
+                '8': {
+                    name: 'Tela para Pintura',
+                    code: 'TP4050',
+                    price: 'R$ 29,90',
+                    description: 'Tela de alta qualidade no tamanho 40x50cm, ideal para pinturas em óleo e acrílica. Superfície tratada para melhor aderência da tinta.',
+                    mainImage: 'img/tela.jpg',
+                    features: [
+                        'Tamanho 40x50cm',
+                        'Tecido 100% algodão',
+                        'Tratamento anti-acidez',
+                        'Gramatura de 380g/m²',
+                        'Chassis em pinus selecionado',
+                        'Preparada com gesso acrílico'
+                    ]
+                },
+                '9': {
+                    name: 'Bloco de Papel Canson A4',
+                    code: 'BPC50',
+                    price: 'R$ 29,90',
+                    description: 'Bloco de papel Canson com 50 folhas formato A4, ideal para desenhos, esboços e técnicas mistas. Alta gramatura para maior durabilidade.',
+                    mainImage: 'img/canson.jpg',
+                    features: [
+                        '50 folhas formato A4 (210 x 297mm)',
+                        'Gramatura de 224g/m²',
+                        'Textura levemente granulada',
+                        'Papel acid-free (pH neutro)',
+                        'Ideal para técnicas secas e húmidas',
+                        'Encadernação em espiral'
+                    ]
+                },
+                '10': {
+                    name: 'Papel para Aquarela 300g/m²',
+                    code: 'PA3040',
+                    price: 'R$ 29,90',
+                    description: 'Papel de alta gramatura (300g/m²) ideal para aquarela, com textura que proporciona excelente absorção e distribuição da tinta.',
+                    mainImage: 'img/papel_aquarela.jpg',
+                    features: [
+                        'Folhas no formato 30x40cm',
+                        'Gramatura de 300g/m²',
+                        'Textura cold pressed',
+                        'pH neutro',
+                        'Alta resistência à umidade',
+                        '100% celulose, livre de ácidos'
+                    ]
+                }
+            };
+            
+            // Update page with product info if product exists
+            const product = products[productId];
+            if (product) {
+                // Update page title
+                document.title = `${product.name} - GalArts`;
+                
+                // Update product details
+                document.querySelector('.product-info h1').textContent = product.name;
+                document.querySelector('.product-code').textContent = `Código: ${product.code}`;
+                document.querySelector('.product-description p').textContent = product.description;
+                document.querySelector('.main-image').src = product.mainImage;
+                document.querySelector('.thumbnail.active').src = product.mainImage;
+                
+                // Update price
+                const priceContainer = document.querySelector('.price-container');
+                priceContainer.querySelector('.price').textContent = product.price;
+                
+                // Update features
+                const featuresList = document.querySelector('.product-features ul');
+                featuresList.innerHTML = '';
+                product.features.forEach(feature => {
+                    const li = document.createElement('li');
+                    li.textContent = feature;
+                    featuresList.appendChild(li);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
