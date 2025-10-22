@@ -1,159 +1,257 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Arte, Loja, Materiais, Site, Website">
-    <link rel="icon" type="image/x-icon" href="img/logo.ico">
+    <link rel="icon" type="image/x-icon" href="img/estrutura/logo.ico">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Inicio - GalArts</title>
 </head>
+
 <body>
     <header>
-        <div class="logo">
-            <h1>GalArts</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="categorias.html">Categorias</a></li>
-                <li><a href="produtos.html">Produtos</a></li>
-            </ul>
+        <!-- barra de navegação principal do site -->
+        <nav class="navbar navbar-expand-lg navbar-custom w-100" style="box-shadow: 0 2px 4px rgb(255, 255, 255);">
+            <div class="container-fluid px-4">
+                <!-- link para a página inicial -->
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    GalArts
+                </a>
+                <!-- botão para menu responsivo -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- links de navegação do menu -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="categorias.html">Categorias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="produtos.html">Produtos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="carrinho.html">Carrinho</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="meus-pedidos.html">Meus Pedidos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="depoimentos.html">Depoimentos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ajuda.html">Ajuda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
-    <div class="promotion-banner">
-        <p>🎨 Frete grátis para compras acima de R$ 100,00! Use o cupom: ARTLIVRE</p>
+    <!-- alert com o bootstrap -->
+    <div class="alert alert-success text-center mb-0" role="alert">
+        🎨 Frete grátis para compras acima de R$ 100,00! Use o cupom: <span class="fw-bold">ARTLIVRE</span>
     </div>
     <main>
-        <section class="banner">
-            <div class="banner-container">
-                <img src="img/banner.jpg" alt="Promoção de materiais artísticos">
-                <img src="img/banner2.jpg" alt="Telas para pintura em promoção">
-                <img src="img/banner3.jpg" alt="Novos materiais para desenho">
-            </div>
-            <div class="banner-controls">
-                <div class="banner-dot active"></div>
-                <div class="banner-dot"></div>
-                <div class="banner-dot"></div>
+        <!-- carrousel com o bootstrap -->
+        <section class="banner mb-3">
+            <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/estrutura/banner.jpg" class="d-block w-100"
+                            alt="Promoção de materiais artísticos">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/estrutura/banner2.jpg" class="d-block w-100" alt="Telas para pintura em promoção">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/estrutura/banner3.jpg" class="d-block w-100" alt="Novos materiais para desenho">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Próximo</span>
+                </button>
             </div>
         </section>
-        <section class="product-list">
+        <!-- seção de produtos em destaque -->
+        <section class="product-list container mb-3">
             <h2 class="section-title">Destaques</h2>
-            <div class="products">
-                <article class="product">
-                    <div class="sale-badge">-30%</div>
-                    <img src="img/aquarela.jpg" alt="Aquarela em Pastilhas">
-                    <h3>Aquarela em Pastilhas</h3>
-                    <p class="description">Conjunto com 24 cores, alta pigmentação.</p>
-                    <div class="price-info">
-                        <p class="price">R$ 89,90</p>
-                        <a href="produto.html?id=1" class="btn btn-primary">Ver detalhes</a>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <span class="badge bg-danger position-absolute top-0 start-0 m-2">-30%</span>
+                        <img src="img/produtos/aquarela.jpg" class="card-img-top" alt="Aquarela em Pastilhas">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Aquarela em Pastilhas</h5>
+                            <p class="card-text">Conjunto com 24 cores, alta pigmentação.</p>
+                            <p class="price fw-bold">R$ 89,90</p>
+                            <a href="produto.html?id=1" class="btn btn-primary mt-auto">Ver detalhes</a>
+                        </div>
                     </div>
-                </article>
-                <article class="product">
-                    <div class="sale-badge">-24%</div>
-                    <img src="img/acrilica.jpg" alt="Tinta Acrílica">
-                    <h3>Tinta Acrílica</h3>
-                    <p class="description">Cores vibrantes, secagem rápida, embalagem de 120ml.</p>
-                    <div class="price-info">
-                        <p class="price">R$ 18,90</p>
-                        <a href="produto.html?id=2" class="btn btn-primary">Ver detalhes</a>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <span class="badge bg-danger position-absolute top-0 start-0 m-2">-24%</span>
+                        <img src="img/produtos/acrilica.jpg" class="card-img-top" alt="Tinta Acrílica">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Tinta Acrílica</h5>
+                            <p class="card-text">Cores vibrantes, secagem rápida, embalagem de 120ml.</p>
+                            <p class="price fw-bold">R$ 18,90</p>
+                            <a href="produto.html?id=2" class="btn btn-primary mt-auto">Ver detalhes</a>
+                        </div>
                     </div>
-                </article>
-                <article class="product">
-                    <div class="sale-badge">-18%</div>
-                    <img src="img/oleo.jpg" alt="Tinta a Óleo">
-                    <h3>Tinta a Óleo</h3>
-                    <p class="description">Tubo de 200ml, ideal para técnicas de empasto.</p>
-                    <div class="price-info">
-                        <p class="price">R$ 44,90</p>
-                        <a href="produto.html?id=3" class="btn btn-primary">Ver detalhes</a>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <span class="badge bg-danger position-absolute top-0 start-0 m-2">-18%</span>
+                        <img src="img/produtos/oleo.jpg" class="card-img-top" alt="Tinta a Óleo">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Tinta a Óleo</h5>
+                            <p class="card-text">Tubo de 200ml, ideal para técnicas de empasto.</p>
+                            <p class="price fw-bold">R$ 44,90</p>
+                            <a href="produto.html?id=3" class="btn btn-primary mt-auto">Ver detalhes</a>
+                        </div>
                     </div>
-                </article>
-                <article class="product">
-                    <div class="sale-badge">-22%</div>
-                    <img src="img/pincel.jpg" alt="Kit Pincéis Sintéticos">
-                    <h3>Kit Pincéis Sintéticos</h3>
-                    <p class="description">7 unidades, Cabo de madeira, variedade de formatos.</p>
-                    <div class="price-info">
-                        <p class="price">R$ 69,90</p>
-                        <a href="produto.html?id=4" class="btn btn-primary">Ver detalhes</a>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <span class="badge bg-danger position-absolute top-0 start-0 m-2">-22%</span>
+                        <img src="img/produtos/pincel.jpg" class="card-img-top" alt="Kit Pincéis Sintéticos">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Kit Pincéis Sintéticos</h5>
+                            <p class="card-text">7 unidades, Cabo de madeira, variedade de formatos.</p>
+                            <p class="price fw-bold">R$ 69,90</p>
+                            <a href="produto.html?id=4" class="btn btn-primary mt-auto">Ver detalhes</a>
+                        </div>
                     </div>
-                </article>
+                </div>
             </div>
         </section>
-        <section class="best-sellers">
+        <!-- seção dos mais vendidos -->
+        <section class="best-sellers container mb-5">
             <h2 class="section-title">Mais Vendidos</h2>
-            <div class="products">
-                <article class="product">
-                    <img src="img/lapis.jpg" alt="Lápis Profissional">
-                    <h3>Lápis Profissional</h3>
-                    <p class="description">Caixa com 12 unidades, ideal para desenhos profissionais.</p>
-                    <div class="price-info">
-                        <p class="price">R$ 29,90</p>
-                        <a href="produto.html?id=6" class="btn btn-primary">Ver detalhes</a>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/produtos/lapis.jpg" class="card-img-top" alt="Lápis Profissional">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Lápis Profissional</h5>
+                            <p class="card-text">Caixa com 12 unidades, ideal para desenhos profissionais.</p>
+                            <p class="price fw-bold">R$ 29,90</p>
+                            <a href="produto.html?id=6" class="btn btn-primary mt-auto">Ver detalhes</a>
+                        </div>
                     </div>
-                </article>
-                <article class="product">
-                    <img src="img/tela.jpg" alt="Tela para Pintura">
-                    <h3>Tela para Pintura (40x50cm)</h3>
-                    <p class="description">Superfície premium para suas obras em acrílico ou óleo!</p>
-                    <div class="price-info">
-                        <p class="price">R$ 29,90</p>
-                        <a href="produto.html?id=8" class="btn btn-primary">Ver detalhes</a>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/produtos/tela.jpg" class="card-img-top" alt="Tela para Pintura">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Tela para Pintura (40x50cm)</h5>
+                            <p class="card-text">Superfície premium para suas obras em acrílico ou óleo!</p>
+                            <p class="price fw-bold">R$ 29,90</p>
+                            <a href="produto.html?id=8" class="btn btn-primary mt-auto">Ver detalhes</a>
+                        </div>
                     </div>
-                </article>
-                <article class="product">
-                    <img src="img/canson.jpg" alt="Bloco de Papel Canson">
-                    <h3>Bloco de Papel Canson A4</h3>
-                    <p class="description">50 folhas, alta gramatura para técnicas secas ou úmidas!</p>
-                    <div class="price-info">
-                        <p class="price">R$ 29,90</p>
-                        <a href="produto.html?id=9" class="btn btn-primary">Ver detalhes</a>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/produtos/canson.jpg" class="card-img-top" alt="Bloco de Papel Canson">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Bloco de Papel Canson A4</h5>
+                            <p class="card-text">50 folhas, alta gramatura para técnicas secas ou úmidas!</p>
+                            <p class="price fw-bold">R$ 29,90</p>
+                            <a href="produto.html?id=9" class="btn btn-primary mt-auto">Ver detalhes</a>
+                        </div>
                     </div>
-                </article>
+                </div>
             </div>
         </section>
-        <section class="newsletter">
-            <h2>Assine nossa Newsletter</h2>
-            <p>Fique por dentro das novidades, promoções exclusivas e dicas para artistas.</p>
-            <form class="newsletter-form">
-                <input type="email" placeholder="Seu melhor e-mail" required>
-                <button type="submit">Assinar</button>
-            </form>
+        <!-- seção de newsletter para cadastro de e-mail -->
+        <section class="newsletter container mb-5">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="card shadow-lg border-0 p-4 newsletter-card"
+                        style="background: linear-gradient(120deg, #42213D 80%, #BD4089 100%);">
+                        <div class="card-body text-center">
+                            <h2 class="mb-2" style="color: #FDC4E8; font-weight: bold;">Assine nossa Newsletter</h2>
+                            <p class="mb-4" style="color: #fff;">Fique por dentro das novidades, promoções exclusivas e
+                                dicas para artistas.</p>
+                            <form
+                                class="newsletter-form d-flex flex-column flex-sm-row gap-2 justify-content-center align-items-stretch">
+                                <input type="email" class="form-control form-control-lg" placeholder="Seu melhor e-mail"
+                                    required style="border-radius: 5px 0 0 5px;">
+                                <button type="submit"
+                                    class="btn btn-primary btn-lg d-flex align-items-center justify-content-center px-4"
+                                    style="border-radius: 0 5px 5px 0; background-color: #BD4089; border: none;">
+                                    <i class="fas fa-paper-plane me-2"></i>Assinar
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section class="contact">
+        <!-- seção de contato com informações da loja -->
+        <section class="contact container mb-5">
             <h2 class="section-title">Entre em Contato</h2>
-            <div class="contact-container">
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-map-marker-alt"></i>
+            <div class="row g-4 justify-content-center">
+                <div class="col-12 col-md-4">
+                    <div class="card h-100 text-center py-4">
+                        <div class="contact-icon mb-2">
+                            <i class="fas fa-map-marker-alt fa-2x"></i>
+                        </div>
+                        <h3 class="h5">Nosso Endereço</h3>
+                        <p class="mb-1">Rua das Artes, 123</p>
+                        <p>São Paulo, SP</p>
                     </div>
-                    <h3>Nosso Endereço</h3>
-                    <p>Rua das Artes, 123</p>
-                    <p>São Paulo, SP</p>
                 </div>
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-phone"></i>
+                <div class="col-12 col-md-4">
+                    <div class="card h-100 text-center py-4">
+                        <div class="contact-icon mb-2">
+                            <i class="fas fa-phone fa-2x"></i>
+                        </div>
+                        <h3 class="h5">Telefone</h3>
+                        <p class="mb-1">(11) 3456-7890</p>
+                        <p>Segunda a Sexta, 9h às 18h</p>
                     </div>
-                    <h3>Telefone</h3>
-                    <p>(11) 3456-7890</p>
-                    <p>Segunda a Sexta, 9h às 18h</p>
                 </div>
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-envelope"></i>
+                <div class="col-12 col-md-4">
+                    <div class="card h-100 text-center py-4">
+                        <div class="contact-icon mb-2">
+                            <i class="fas fa-envelope fa-2x"></i>
+                        </div>
+                        <h3 class="h5">E-mail</h3>
+                        <p class="mb-1">contato@galarts.com.br</p>
+                        <p>Respondemos em até 24h</p>
                     </div>
-                    <h3>E-mail</h3>
-                    <p>contato@galarts.com.br</p>
-                    <p>Respondemos em até 24h</p>
                 </div>
             </div>
         </section>
     </main>
-    <footer>
+    <footer style="background: linear-gradient(90deg, #42213D 50%, #BD4089 100%);">
+        <!-- seção de redes sociais e informações do rodapé -->
         <div class="social-media">
             <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
             <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
@@ -163,6 +261,21 @@
         <p>GalArts - Materiais Artísticos de Qualidade</p>
         <p>&copy; 2025 GalArts. Todos os direitos reservados.</p>
     </footer>
+    <!-- toast de feedback para newsletter -->
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1100">
+        <div id="newsletterToast" class="toast align-items-center text-bg-primary border-0" role="alert"
+            aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body" id="newsletterToastMsg">
+                    Obrigado por se inscrever!
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                    aria-label="Fechar"></button>
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/scripts.js"></script>
 </body>
+
 </html>

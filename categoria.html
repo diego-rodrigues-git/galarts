@@ -1,101 +1,166 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="img/logo.ico">
+    <meta name="keywords" content="Arte, Loja, Materiais, Site, Website">
+    <link rel="icon" type="image/x-icon" href="img/estrutura/logo.ico">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Categoria - GalArts</title>
 </head>
+
 <body>
     <header>
-        <div class="logo">
-            <h1>GalArts</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="categorias.html">Categorias</a></li>
-                <li><a href="produtos.html">Produtos</a></li>
-            </ul>
+        <!-- barra de navegação principal do site -->
+        <nav class="navbar navbar-expand-lg navbar-custom w-100" style="box-shadow: 0 2px 4px rgb(255, 255, 255);">
+            <div class="container-fluid px-4">
+                <!-- link para a página inicial -->
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    GalArts
+                </a>
+                <!-- botão para menu responsivo -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- links de navegação do menu -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="categorias.html">Categorias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="produtos.html">Produtos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="carrinho.html">Carrinho</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="meus-pedidos.html">Meus Pedidos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="depoimentos.html">Depoimentos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ajuda.html">Ajuda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
-    
     <main>
-        <div class="category-hero" style="background-image: url('img/pincel.jpg');">
+        <!-- banner da categoria com imagem e descrição -->
+        <div class="category-hero" style="background-image: url('img/produtos/pincel.jpg');">
             <div class="category-hero-content">
                 <h1>Pintura Artística</h1>
-                <p>Encontre os melhores materiais para dar vida às suas criações artísticas. De tintas profissionais a pincéis de alta qualidade.</p>
+                <p>Encontre os melhores materiais para dar vida às suas criações artísticas. De tintas profissionais a
+                    pincéis de alta qualidade.</p>
             </div>
         </div>
-        
-        <section class="product-list">
-            <h2 class="section-title">Produtos em Destaque nesta Categoria</h2>
-            <div class="products">
-                <article class="product">
-                    <div class="sale-badge">-30%</div>
-                    <img src="img/aquarela.jpg" alt="Aquarela em Pastilhas">
-                    <h3>Aquarela em Pastilhas</h3>
-                    <p class="description">Conjunto com 24 cores, alta pigmentação.</p>
-                    <div class="price-info">
-                        <p class="price">R$ 89,90</p>
-                        <a href="produto.html?id=1" class="btn btn-primary">Ver detalhes</a>
+        <!-- seção de produtos em destaque na categoria -->
+        <section class="product-list py-5">
+            <h2 class="section-title text-center mb-5">Produtos em Destaque nesta Categoria</h2>
+            <div class="container">
+                <div class="row g-4 justify-content-center">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                        <article class="card h-100 product-card position-relative">
+                            <div
+                                class="sale-badge position-absolute top-0 end-0 bg-danger text-white px-2 py-1 rounded-end">
+                                -30%</div>
+                            <img src="img/produtos/aquarela.jpg" class="card-img-top" alt="Aquarela em Pastilhas"
+                                style="height:180px;object-fit:cover;">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title h6">Aquarela em Pastilhas</h3>
+                                <p class="card-text flex-grow-1">Conjunto com 24 cores, alta pigmentação.</p>
+                                <div class="d-flex justify-content-between align-items-center mt-2">
+                                    <span class="fw-bold text-primary">R$ 89,90</span>
+                                    <a href="produto.html?id=1" class="btn btn-outline-primary btn-sm">Ver detalhes</a>
+                                </div>
+                            </div>
+                        </article>
                     </div>
-                </article>
-                <article class="product">
-                    <div class="sale-badge">-24%</div>
-                    <img src="img/acrilica.jpg" alt="Tinta Acrílica">
-                    <h3>Tinta Acrílica</h3>
-                    <p class="description">Cores vibrantes, secagem rápida, embalagem de 120ml.</p>
-                    <div class="price-info">
-                        <p class="price">R$ 18,90</p>
-                        <a href="produto.html?id=2" class="btn btn-primary">Ver detalhes</a>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                        <article class="card h-100 product-card position-relative">
+                            <div
+                                class="sale-badge position-absolute top-0 end-0 bg-danger text-white px-2 py-1 rounded-end">
+                                -24%</div>
+                            <img src="img/produtos/acrilica.jpg" class="card-img-top" alt="Tinta Acrílica"
+                                style="height:180px;object-fit:cover;">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title h6">Tinta Acrílica</h3>
+                                <p class="card-text flex-grow-1">Cores vibrantes, secagem rápida, embalagem de 120ml.
+                                </p>
+                                <div class="d-flex justify-content-between align-items-center mt-2">
+                                    <span class="fw-bold text-primary">R$ 18,90</span>
+                                    <a href="produto.html?id=2" class="btn btn-outline-primary btn-sm">Ver detalhes</a>
+                                </div>
+                            </div>
+                        </article>
                     </div>
-                </article>
-                <article class="product">
-                    <div class="sale-badge">-18%</div>
-                    <img src="img/oleo.jpg" alt="Tinta a Óleo">
-                    <h3>Tinta a Óleo</h3>
-                    <p class="description">Tubo de 200ml, ideal para técnicas de empasto.</p>
-                    <div class="price-info">
-                        <p class="price">R$ 44,90</p>
-                        <a href="produto.html?id=3" class="btn btn-primary">Ver detalhes</a>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                        <article class="card h-100 product-card position-relative">
+                            <div
+                                class="sale-badge position-absolute top-0 end-0 bg-danger text-white px-2 py-1 rounded-end">
+                                -18%</div>
+                            <img src="img/produtos/oleo.jpg" class="card-img-top" alt="Tinta a Óleo"
+                                style="height:180px;object-fit:cover;">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title h6">Tinta a Óleo</h3>
+                                <p class="card-text flex-grow-1">Tubo de 200ml, ideal para técnicas de empasto.</p>
+                                <div class="d-flex justify-content-between align-items-center mt-2">
+                                    <span class="fw-bold text-primary">R$ 44,90</span>
+                                    <a href="produto.html?id=3" class="btn btn-outline-primary btn-sm">Ver detalhes</a>
+                                </div>
+                            </div>
+                        </article>
                     </div>
-                </article>
-                <article class="product">
-                    <div class="sale-badge">-22%</div>
-                    <img src="img/pincel.jpg" alt="Kit Pincéis Sintéticos">
-                    <h3>Kit Pincéis Sintéticos</h3>
-                    <p class="description">7 unidades, Cabo de madeira, variedade de formatos.</p>
-                    <div class="price-info">
-                        <p class="price">R$ 69,90</p>
-                        <a href="produto.html?id=4" class="btn btn-primary">Ver detalhes</a>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                        <article class="card h-100 product-card position-relative">
+                            <div
+                                class="sale-badge position-absolute top-0 end-0 bg-danger text-white px-2 py-1 rounded-end">
+                                -22%</div>
+                            <img src="img/produtos/pincel.jpg" class="card-img-top" alt="Kit Pincéis Sintéticos"
+                                style="height:180px;object-fit:cover;">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title h6">Kit Pincéis Sintéticos</h3>
+                                <p class="card-text flex-grow-1">7 unidades, Cabo de madeira, variedade de formatos.</p>
+                                <div class="d-flex justify-content-between align-items-center mt-2">
+                                    <span class="fw-bold text-primary">R$ 69,90</span>
+                                    <a href="produto.html?id=4" class="btn btn-outline-primary btn-sm">Ver detalhes</a>
+                                </div>
+                            </div>
+                        </article>
                     </div>
-                </article>
-                <article class="product">
-                    <img src="img/pincel_marta.jpg" alt="Pincel para Detalhes em Pelo de Marta">
-                    <h3>Pincel para Detalhes em Pelo de Marta</h3>
-                    <p class="description">Precisão para miniaturas e retratos.</p>
-                    <div class="price-info">
-                        <p class="price">R$ 32,00</p>
-                        <a href="produto.html?id=5" class="btn btn-primary">Ver detalhes</a>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                        <article class="card h-100 product-card position-relative">
+                            <img src="img/produtos/pincel_marta.jpg" class="card-img-top"
+                                alt="Pincel para Detalhes em Pelo de Marta" style="height:180px;object-fit:cover;">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title h6">Pincel para Detalhes em Pelo de Marta</h3>
+                                <p class="card-text flex-grow-1">Precisão para miniaturas e retratos.</p>
+                                <div class="d-flex justify-content-between align-items-center mt-2">
+                                    <span class="fw-bold text-primary">R$ 32,00</span>
+                                    <a href="produto.html?id=5" class="btn btn-outline-primary btn-sm">Ver detalhes</a>
+                                </div>
+                            </div>
+                        </article>
                     </div>
-                </article>
+                </div>
             </div>
         </section>
-        
-        <section class="newsletter">
-            <h2>Receba Novidades desta Categoria</h2>
-            <p>Cadastre-se para receber ofertas exclusivas e dicas para aprimorar suas técnicas.</p>
-            <form class="newsletter-form">
-                <input type="email" placeholder="Seu melhor e-mail" required>
-                <button type="submit">Assinar</button>
-            </form>
-        </section>
     </main>
-    
-    <footer>
+    <footer style="background: linear-gradient(90deg, #42213D 50%, #BD4089 100%);">
+        <!-- seção de redes sociais e informações do rodapé -->
         <div class="social-media">
             <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
             <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
@@ -105,60 +170,8 @@
         <p>GalArts - Materiais Artísticos de Qualidade</p>
         <p>&copy; 2025 GalArts. Todos os direitos reservados.</p>
     </footer>
-    
+    <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/scripts.js"></script>
-    <script>
-        // Script to update the category page based on URL parameter
-        document.addEventListener('DOMContentLoaded', function() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const categoryId = urlParams.get('id');
-            
-            // Default content if no category is specified
-            let categoryTitle = 'Pintura Artística';
-            let categoryDescription = 'Encontre os melhores materiais para dar vida às suas criações artísticas.';
-            let categoryImage = 'img/pincel.jpg';
-            
-            // Update content based on category ID
-            if (categoryId === 'desenho') {
-                categoryTitle = 'Desenho e Esboço';
-                categoryDescription = 'Explore nossa seleção de materiais para desenho e esboço de qualidade profissional.';
-                categoryImage = 'img/lapis.jpg';
-                document.title = 'Desenho e Esboço - GalArts';
-            } else if (categoryId === 'telas') {
-                categoryTitle = 'Tintas e Telas';
-                categoryDescription = 'As melhores tintas e telas para suas obras-primas.';
-                categoryImage = 'img/tela.jpg';
-                document.title = 'Tintas e Telas - GalArts';
-            } else if (categoryId === 'papeis') {
-                categoryTitle = 'Papéis Especiais';
-                categoryDescription = 'Papéis de alta qualidade para todas as técnicas artísticas.';
-                categoryImage = 'img/canson.jpg';
-                document.title = 'Papéis Especiais - GalArts';
-            } else if (categoryId === 'acessorios') {
-                categoryTitle = 'Acessórios para Artistas';
-                categoryDescription = 'Todos os acessórios que você precisa para aprimorar seu trabalho.';
-                categoryImage = 'img/grafite.jpg';
-                document.title = 'Acessórios para Artistas - GalArts';
-            } else if (categoryId === 'kits') {
-                categoryTitle = 'Kits para Iniciantes';
-                categoryDescription = 'Tudo o que você precisa para começar sua jornada artística.';
-                categoryImage = 'img/papel_aquarela.jpg';
-                document.title = 'Kits para Iniciantes - GalArts';
-            } else if (categoryId === 'pintura') {
-                document.title = 'Pintura Artística - GalArts';
-            }
-            
-            // Update the page content
-            const heroSection = document.querySelector('.category-hero');
-            const heroTitle = document.querySelector('.category-hero h1');
-            const heroDescription = document.querySelector('.category-hero p');
-            
-            if (heroSection && heroTitle && heroDescription) {
-                heroSection.style.backgroundImage = `url('${categoryImage}')`;
-                heroTitle.textContent = categoryTitle;
-                heroDescription.textContent = categoryDescription;
-            }
-        });
-    </script>
 </body>
+
 </html>

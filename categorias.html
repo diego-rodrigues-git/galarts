@@ -1,87 +1,130 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="img/logo.ico">
+    <meta name="keywords" content="Arte, Loja, Materiais, Site, Website">
+    <link rel="icon" type="image/x-icon" href="img/estrutura/logo.ico">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Categorias - GalArts</title>
 </head>
+
 <body>
     <header>
-        <div class="logo">
-            <h1>GalArts</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="categorias.html">Categorias</a></li>
-                <li><a href="produtos.html">Produtos</a></li>
-            </ul>
+        <!-- barra de navegação principal do site -->
+        <nav class="navbar navbar-expand-lg navbar-custom w-100" style="box-shadow: 0 2px 4px rgb(255, 255, 255);">
+            <div class="container-fluid px-4">
+                <!-- link para a página inicial -->
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    GalArts
+                </a>
+                <!-- botão para menu responsivo -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- links de navegação do menu -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="categorias.html">Categorias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="produtos.html">Produtos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="carrinho.html">Carrinho</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="meus-pedidos.html">Meus Pedidos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="depoimentos.html">Depoimentos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ajuda.html">Ajuda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
-    
+
     <main>
-        <section class="categories-list">
-            <h2 class="section-title">Nossas Categorias</h2>
-            <div class="categories">
-                <article class="category">
-                    <a href="categoria.html?id=pintura">
-                        <img src="img/pincel.jpg" alt="Materiais para pintura">
-                        <h3>Pintura Artística</h3>
-                        <p>Descubra nossa variedade de tintas a óleo, aquarelas, acrílicas e pincéis profissionais para artistas.</p>
-                    </a>
-                </article>
-                <article class="category">
-                    <a href="categoria.html?id=desenho">
-                        <img src="img/lapis.jpg" alt="Materiais para desenho">
-                        <h3>Desenho e Esboço</h3>
-                        <p>Lápis de diferentes grafites, canetas nanquim, sketchbooks e acessórios para desenhistas.</p>
-                    </a>
-                </article>
-                <article class="category">
-                    <a href="categoria.html?id=telas">
-                        <img src="img/tela.jpg" alt="Tintas e Telas">
-                        <h3>Tintas e Telas</h3>
-                        <p>Tinta acrílica, spray para grafite, spray para uso geral, telas de pintura, etc.</p>
-                    </a>
-                </article>
-                <article class="category">
-                    <a href="categoria.html?id=papeis">
-                        <img src="img/canson.jpg" alt="Papéis Especiais">
-                        <h3>Papéis Especiais</h3>
-                        <p>Papel Canson, papel para aquarela, papéis com textura, blocos para técnicas mistas e muito mais.</p>
-                    </a>
-                </article>
-                <article class="category">
-                    <a href="categoria.html?id=acessorios">
-                        <img src="img/grafite.jpg" alt="Acessórios para Artistas">
-                        <h3>Acessórios para Artistas</h3>
-                        <p>Cavaletes, paletas, espátulas, estiletes, tesouras e todos os acessórios que você precisa.</p>
-                    </a>
-                </article>
-                <article class="category">
-                    <a href="categoria.html?id=kits">
-                        <img src="img/papel_aquarela.jpg" alt="Kits para Iniciantes">
-                        <h3>Kits para Iniciantes</h3>
-                        <p>Conjuntos completos para começar a explorar diversas técnicas artísticas, desde desenho até aquarela.</p>
-                    </a>
-                </article>
+        <section class="categories-list py-5">
+            <h2 class="section-title text-center mb-5">Nossas Categorias</h2>
+            <div class="container">
+                <div class="row g-4 justify-content-center">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                        <a href="categoria.html?id=pintura" class="card h-100 category-card text-decoration-none text-dark shadow-sm border-0">
+                            <img src="img/produtos/pincel.jpg" class="card-img-top" alt="Materiais para pintura">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title h5">Pintura Artística</h3>
+                                <p class="card-text">Descubra nossa variedade de tintas a óleo, aquarelas, acrílicas e pincéis profissionais para artistas.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                        <a href="categoria.html?id=desenho" class="card h-100 category-card text-decoration-none text-dark shadow-sm border-0">
+                            <img src="img/produtos/lapis.jpg" class="card-img-top" alt="Materiais para desenho">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title h5">Desenho e Esboço</h3>
+                                <p class="card-text">Lápis de diferentes grafites, canetas nanquim, sketchbooks e acessórios para desenhistas.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                        <a href="categoria.html?id=telas" class="card h-100 category-card text-decoration-none text-dark shadow-sm border-0">
+                            <img src="img/produtos/tela.jpg" class="card-img-top" alt="Tintas e Telas">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title h5">Tintas e Telas</h3>
+                                <p class="card-text">Tinta acrílica, spray para grafite, spray para uso geral, telas de pintura, etc.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                        <a href="categoria.html?id=papeis" class="card h-100 category-card text-decoration-none text-dark shadow-sm border-0">
+                            <img src="img/produtos/canson.jpg" class="card-img-top" alt="Papéis Especiais">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title h5">Papéis Especiais</h3>
+                                <p class="card-text">Papel Canson, papel para aquarela, papéis com textura, blocos para técnicas mistas e muito mais.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                        <a href="categoria.html?id=acessorios" class="card h-100 category-card text-decoration-none text-dark shadow-sm border-0">
+                            <img src="img/produtos/grafite.jpg" class="card-img-top" alt="Acessórios para Artistas">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title h5">Acessórios para Artistas</h3>
+                                <p class="card-text">Cavaletes, paletas, espátulas, estiletes, tesouras e todos os acessórios que você precisa.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                        <a href="categoria.html?id=kits" class="card h-100 category-card text-decoration-none text-dark shadow-sm border-0">
+                            <img src="img/produtos/papel_aquarela.jpg" class="card-img-top" alt="Kits para Iniciantes">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title h5">Kits para Iniciantes</h3>
+                                <p class="card-text">Conjuntos completos para começar a explorar diversas técnicas artísticas, desde desenho até aquarela.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
-        
-        <section class="newsletter">
-            <h2>Assine nossa Newsletter</h2>
-            <p>Fique por dentro das novidades, promoções exclusivas e dicas para artistas.</p>
-            <form class="newsletter-form">
-                <input type="email" placeholder="Seu melhor e-mail" required>
-                <button type="submit">Assinar</button>
-            </form>
-        </section>
     </main>
-    
-    <footer>
+
+    <footer style="background: linear-gradient(90deg, #42213D 50%, #BD4089 100%);">
+        <!-- seção de redes sociais e informações do rodapé -->
         <div class="social-media">
             <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
             <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
@@ -91,7 +134,8 @@
         <p>GalArts - Materiais Artísticos de Qualidade</p>
         <p>&copy; 2025 GalArts. Todos os direitos reservados.</p>
     </footer>
-    
+    <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/scripts.js"></script>
 </body>
+
 </html>

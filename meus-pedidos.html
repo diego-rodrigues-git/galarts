@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Arte, Loja, Materiais, Site, Website">
+    <link rel="icon" type="image/x-icon" href="img/estrutura/logo.ico">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Meus Pedidos - GalArts</title>
+</head>
+
+<body>
+    <header>
+        <!-- barra de navegação principal do site -->
+        <nav class="navbar navbar-expand-lg navbar-custom w-100" style="box-shadow: 0 2px 4px rgb(255, 255, 255);">
+            <div class="container-fluid px-4">
+                <!-- link para a página inicial -->
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    GalArts
+                </a>
+                <!-- botão para menu responsivo -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- links de navegação do menu -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="categorias.html">Categorias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="produtos.html">Produtos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="carrinho.html">Carrinho</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="meus-pedidos.html">Meus Pedidos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="depoimentos.html">Depoimentos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ajuda.html">Ajuda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container my-5">
+        <h1 class="section-title">Meus Pedidos</h1>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <!-- Pedido 1 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <img src="img/produtos/acrilica.jpg" class="card-img-top" alt="Tinta Acrílica">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Tinta Acrílica Profissional</h5>
+                        <p class="card-text mb-1"><strong>Pedido:</strong> #123456</p>
+                        <p class="card-text mb-1"><strong>Status:</strong> Em transporte</p>
+                        <p class="card-text mb-3"><strong>Data:</strong> 10/06/2025</p>
+                        <button class="btn btn-primary mt-auto w-100"><i class="fas fa-truck"></i> Rastrear pedido</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Pedido 2 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <img src="img/produtos/papel_aquarela.jpg" class="card-img-top" alt="Papel para Aquarela">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Papel para Aquarela 300g</h5>
+                        <p class="card-text mb-1"><strong>Pedido:</strong> #123457</p>
+                        <p class="card-text mb-1"><strong>Status:</strong> Entregue</p>
+                        <p class="card-text mb-3"><strong>Data:</strong> 05/06/2025</p>
+                        <button class="btn btn-primary mt-auto w-100"><i class="fas fa-truck"></i> Rastrear pedido</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Pedido 3 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <img src="img/produtos/pincel.jpg" class="card-img-top" alt="Pincel Artístico">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Pincel Artístico Marta</h5>
+                        <p class="card-text mb-1"><strong>Pedido:</strong> #123458</p>
+                        <p class="card-text mb-1"><strong>Status:</strong> Processando</p>
+                        <p class="card-text mb-3"><strong>Data:</strong> 20/06/2025</p>
+                        <button class="btn btn-primary mt-auto w-100"><i class="fas fa-truck"></i> Rastrear pedido</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer style="background: linear-gradient(90deg, #42213D 50%, #BD4089 100%);">
+        <!-- seção de redes sociais e informações do rodapé -->
+        <div class="social-media">
+            <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-pinterest"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p>GalArts - Materiais Artísticos de Qualidade</p>
+        <p>&copy; 2025 GalArts. Todos os direitos reservados.</p>
+    </footer>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
